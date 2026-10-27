@@ -432,7 +432,7 @@ elif navigation == "👥 Leads Directory & Edit":
                             default_date = date.today()
                     edit_followup = st.date_input("Next Follow-up Date", value=default_date)
 
-                edit_notes = st.text_area("Agent Notes & Meeting Summary", value=lead_data["notes"] or "", rows=3)
+                edit_notes = st.text_area("Agent Notes & Meeting Summary", value=lead_data["notes"] or "", height=100)
 
                 btn_col1, btn_col2 = st.columns([1, 4])
                 with btn_col1:
@@ -547,7 +547,7 @@ elif navigation == "➕ Add New Lead":
             notes = st.text_area(
                 "Requirements & Discussion Notes",
                 placeholder="Mention specific client needs (e.g., south-facing balcony, parking space, pre-approved mortgage)...",
-                rows=3
+                height=100
             )
 
         submit_btn = st.form_submit_button("🚀 Create Lead & Calculate AI Score", use_container_width=True)
